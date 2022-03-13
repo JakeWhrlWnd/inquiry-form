@@ -37,3 +37,14 @@ input, button, textarea, select {
 p, h1, h2, h3, h4, h5, h6 {
     overflow-wrap: break-word;
 }
+
+body {
+    background-color: var(--background-medium, gainsboro);
+    color: var(--background-dark, black);
+    font-family: var(--primary-font, Arial, Helvetica, sans-serif);
+}
+
+.page-header {
+    background-image: url(imgs/pexels-curtis-adams-4839348.jpg);
+}
+
