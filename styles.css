@@ -42,9 +42,24 @@ body {
     background-color: var(--background-medium, gainsboro);
     color: var(--background-dark, black);
     font-family: var(--primary-font, Arial, Helvetica, sans-serif);
+
+    display: grid;
+    grid-template-columns: repeat(6, 1fr);
+    grid-template-rows: repeat(6, 1fr);
+    grid-template-areas: "header header section section section section"
+    "footer footer footer footer footer footer";
 }
 
 .page-header {
+    grid-area: header;
     background-image: url(imgs/pexels-curtis-adams-4839348.jpg);
+}
+
+.main {
+    grid-area: section;
+}
+
+.page-footer {
+    grid-area: footer;
 }
 
