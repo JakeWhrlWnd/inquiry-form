@@ -8,57 +8,61 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <div class="content">
-        <h1 hidden aria-hidden="true" id="page-heading" class="page-heading">MLH Inquiry Form</h1>
-    
-        <header id="page-header" class="left page-header">
+    <!--Page heading, hidden-->
+    <h1 hidden aria-hidden="true" id="page-header">MLH Inquiry Form</h1>
+
+    <!--Page Content-->
+    <div id="content" class="content">
+        <header id="content-header" class="header">
             <div id="logo-container" class="logo-container">
-                <img src="imgs/MLH_H_Logo_WHITE.svg" alt="MLH horizontal logo in white">
+                <img id="logo" class="logo" src="imgs/MLH_H_Logo_WHITE.svg" alt="MLH horizontal logo in white">
             </div>
         </header>
-    
-        <main id="main" class="right main">
-            <header id="main-header" class="main-header">
-                <h2>Let's make some money together!</h2>
-                <p>We will pay cash for your home. RIGHT NOW! Contact us to find out what we can offer you.</p>
+        
+        <main id="content-main" class="main">
+            <header>    
+                <h1>Let's make some money together!</h1>
+                <p>Buffalo ham shank, jowl spare ribs pastrami porchetta. Shoulder capicola fatback pork belly strip steak biltong tenderloin leberkas t-bone kielbasa cupim pancetta. Cow chislic pork doner, strip steak bacon spare ribs flank short loin. Pancetta kielbasa hamburger, tongue shank meatball brisket chuck ham hock drumstick tri-tip porchetta pork belly.</p>
             </header>
-    
-            <section id="form-container" class="form-container">
-                <form action="#" method="get" class="inquiry-form">
-                    <div id="first-name-container" class="form-row first-name-container">
-                        <label for="first-name">First Name:</label>
-                        <input id="first-name" name="first-name" type="text" placeholder="John">
+            
+            <section>
+                <form action="#">
+                    <!--First name input field-->
+                    <div id="first-name-container" class="first-name form-row">
+                        <label for="first-name">First Name:*</label>
+                        <input id="first-name" name="first-name" type="text" placeholder="John" required>
                     </div>
-                    
-                    <div id="last-name-container" class="form-row last-name-container">
-                        <label for="last-name">Last Name:</label>
-                        <input id="last-name" name="last-name" type="text" placeholder="Smith">
+                    <!--Last name input field-->
+                    <div id="last-name-container" class="last-name form-row">
+                        <label for="last-name">Last Name:*</label>
+                        <input id="last-name" name="last-name" type="text" placeholder="Smith" required>
                     </div>
-    
-                    <div id="phone-container" class="form-row phone-container">
-                        <label for="phone">Phone Number:</label>
-                        <input id="phone" name="phone" type="text">
+                    <!--Phone number input field-->
+                    <div id="tel-container" class="phone form-row">
+                        <label for="phone">Phone:*</label>
+                        <small>Format: 123-456-7890</small>
+                        <input id="phone" name="phone" type="tel" pattern="[0-9]{3}-[0-9]{3}-[0-9]{4}" required>
                     </div>
-    
-                    <div id="email-container" class="form-row email-container">
-                        <label for="email">Email:</label>
-                        <input id="email" name="email" type="email">
+                    <!--Email input field-->
+                    <div id="email-container" class="email form-row">
+                        <label for="email">Email:*</label>
+                        <input id="email" name="email" type="email" placeholder="yourname@email.com" required>
                     </div>
-    
-                    <div id="address-container" class="form-row address-container">
-                        <label for="address">Property Address:</label>
-                        <input id="address" name="address" type="text">
+                    <!--Address input field-->
+                    <div id="address-container" class="address form-row">
+                        <label for="address">Property Address:*</label>
+                        <input id="address" name="address" type="text" placeholder="555 Your Drive" required>
                     </div>
-                    
-                    <div id="city-container" class="form-row city-container">
+                    <!--City input field-->
+                    <div id="city-container" class="city form-row">
                         <label for="city">City:</label>
-                        <input id="city" name="city" type="text">
+                        <input id="city" name="city" type="text" placeholder="Baltimore">
                     </div>
-                    
-                    <div id="state-container" class="form-row state-container">
+                    <!--State selection field-->
+                    <div id="state-selector" class="state form-row">
                         <label for="state">State:</label>
-                        <select id="state" name="state">
-                            <option value="">Select One</option>
+                        <select name="state" id="state">
+                            <option value="" selected="selected">Select a State</option>
                             <option value="AL">Alabama</option>
                             <option value="AK">Alaska</option>
                             <option value="AZ">Arizona</option>
@@ -112,22 +116,22 @@
                             <option value="WY">Wyoming</option>
                         </select>
                     </div>
-                    
-                    <div id="zipcode-container" class="form-row zipcode-container">
-                        <label for="zipcode">Zipcode:</label>
-                        <input id="zipcode" name="zipcode" type="text">
-                    </div>
-    
-                    <div id="submit-container" class="form-row submit-container">
-                        <button>Submit</button>
+                    <!--Zipcode input field-->
+                    <div id="zip-container" class="zip form-row">
+                        <label for="zip">Zipcode:*</label>
+                        <input id="zip" name="zip" type="text" placeholder="12345" required>
                     </div>
                 </form>
+                <div class="button">
+                    <button type="submit">Submit</button>
+                </div>
             </section>
-    
-            <footer id="page-footer" class="page-footer">
-                <p>Created by James, 2022 - The Odin Project</p>
-            </footer>
         </main>
     </div>
+
+    <!--Page Footer-->
+    <footer id="page-footer" class="page-footer">
+        <p>Created by James, 2022 - The Odin Project</p>
+    </footer>
 </body>
 </html>

@@ -1,12 +1,215 @@
-* {
+@import url('https://fonts.googleapis.com/css2?family=Lato&family=Open+Sans&family=Playfair+Display&display=swap');
+
+
+*, ::before, ::after {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    outline: 2px solid red;
+}
+
+
+
+:root {
+    --primary-font: 'Lato', sans-serif;
+    --secondary-font: 'Open Sans', sans-serif;
+    --tertiary-font: 'Playfair Display', serif;
+
+    --primary-brand-color: rgb(0, 177, 64);
+    --secondary-brand-color: rgb(8, 44, 64);
+    --brand-black: rgb(19, 28, 40);
+    --main-background: rgb(250, 250, 250);
+    --secondary-background: rgb(240, 240, 240);
+}
+
+body {
+    background-color: var(--secondary-background);
+}
+
+h1 { font-size: 2rem; }
+h2 { font-size: 1.5rem; }
+h3 { font-size: 1.17rem; }
+h4 { font-size: 1.00rem; }
+h5 { font-size: 0.83rem; }
+h6 { font-size: 0.67rem; }
+
+/* article, aside, details, figcaption, figure, footer, header, hgroup, main, nav, section {
+    display: block;
+} */
+
+.content {
+    height: 95vh;
+
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.header {
+    width: 40%;
+    background-image: url(imgs/pexels-curtis-adams-4839348.jpg);
+    background-position: center;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+}
+
+.logo-container {
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 2em 1em;
+    margin-top: 19vh;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    width: 20em;
+    padding: 1em 0;
+}
+
+.main {
+    width: 60%;
+
+    display: flex;
+    flex-flow: column nowrap;
+    gap: 2em;
+}
+
+.main header {
+    width: 90%;
+    margin-top: 10em;
+    padding-left: 2em;
+}
+
+.main h1 {
+    margin-bottom: 5px;
+
+    font-family: var(--primary-font);
+}
+
+.main h1, .main p {
+    padding-top: 1em;
+    padding-bottom: 1em;
+}
+
+.main p {
+    font-size: 1rem;
+    font-family: var(--secondary-font);
+}
+
+.main form {
+    background-color: var(--main-background);
+    color: var(--brand-black);
+
+    padding: 3em 0 3em 2em;
+
+    display: flex;
+    flex-flow: row wrap;
+    column-gap: 2em;
+    row-gap: 1em;
+}
+
+.form-row {
+    width: 40%;
+    display: flex;
+    flex-flow: column wrap;
+    font-size: 0.9rem;
+}
+
+.form-row label {
+    margin-bottom: .4em;
+    font-family: var(--secondary-font);
+}
+
+.button {
+    padding: 2em 2em;
+}
+
+.button button {
+    background-color: var(--primary-brand-color);
+    color: var(--main-background);
+    padding: 1em 4em;
+    border: none;
+    border-radius: 5px;
+}
+
+footer {
+    background-color: var(--primary-brand-color);
+    color: var(--main-background);
+
+    padding: 1em 0;
+
+    font-family: var(--secondary-font);
     text-align: center;
 }
 
-.content {
-    display: flex;
-    justify-content: center;
+
+@media only screen and (max-width: 800px)  {
+    .content{
+        display: flex;
+        flex-flow: column nowrap;
+        align-items: center;
+        text-align: center;
+    }
+
+    .header{
+        width: 100%;
+        height: auto;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-size: 100vw;
+        background-position: center;
+    }
+
+    .logo-container{
+        margin-top: 2em;
+        margin-bottom: 2em;
+        width: 100%;
+    }
+
+    .main{
+        width: 100vw;
+    }
+
+    .main header{
+        width: auto;
+        margin-top: 30px;
+        padding: 0 3em;
+    }
+
+    .main form{
+        flex-flow: column nowrap;
+        justify-content: center;
+    }
+
+    .form-row {
+        text-align: left;
+        width: auto;
+        font-size: 0.9em;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .form-row input{
+        font-size: 0.9rem;
+        height: 1.5rem;
+        width: 70vw;
+    }
+
+    .button {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 20px;
+    }
+
+    .button button{
+        margin-bottom: 0px;
+        width: 60vw;
+        padding: 10px 5px;
+    }
+
+    .page-footer {
+        position: fixed;
+        width: 100%;
+    }
 }
